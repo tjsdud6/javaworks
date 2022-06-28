@@ -1,11 +1,12 @@
-package ch2;
+package seats;
 
 import java.util.Scanner;
 
-public class Seats {
+public class Seat {
 
 	public static void main(String[] args) {
-		// 자리배치도 프로그램
+		//입장객 수와 좌석 열수에 따른 줄(행) 수 계산하기
+		//나누어 떨어지는 경우, 나머지가 있는 경우
 		Scanner scan = new Scanner(System.in);
 		System.out.print("입장객 수 : ");
 		int member = scan.nextInt();
@@ -13,24 +14,17 @@ public class Seats {
 		System.out.print("좌석 열수 : ");
 		int colNum = scan.nextInt();
 		
-		int rowNum = 0; //줄 수 
+		int rowNum = 0; 
 
 		//연산
-		if(member % colNum == 0) {
+		if(member % colNum ==0) {
 			rowNum = member / colNum;
 		}else {
 			rowNum = (member / colNum) + 1;
 		}
 		
-		for (int i = 0; i < rowNum; i++) {//행
-			for(int j = 1; j <= colNum; j++) {
-				int seatNum = i * colNum + j;
-				if(seatNum > member)
-					break;
-				System.out.print(seatNum+ " ");
-			}
-			System.out.println();
-		}
+		//출력
+		System.out.println(rowNum + "개의 줄이 필요합니다.");
 		scan.close();
 	}
 

@@ -1,4 +1,4 @@
-package ch2;
+package loopexample;
 
 import java.util.Scanner;
 
