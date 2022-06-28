@@ -9,7 +9,7 @@ public class VariableScopeExample {
 			int v2;
 			v2 = v1 - 10;
 		}
-		int v3 = v1 + 5; //v2는 if문을 나오면서 소멸
+		//int v3 = v1 + v2 + 5; //v2는 if문을 나오면서 소멸
 	}
 
 }
