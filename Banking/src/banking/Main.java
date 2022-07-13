@@ -87,6 +87,11 @@ public class Main {
 		String ano = scanner.next();
 		
 		//계좌가 없습니다. 다시 입력하세요
+		if(findAccount(ano) == null){
+			System.out.println("계좌가 없습니다. 다시 입력하세요");
+			System.out.println("계좌번호:");
+			ano= scanner.next();
+		}
 		
 		Account account = findAccount(ano);
 		
